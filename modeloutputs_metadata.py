@@ -128,7 +128,7 @@ def modelcatalog_entry(model_name, run_name, file_dir, resourceURL='',
     start_dt, stop_dt = MW.File_Times(model_name, file_dir, print_output=False)
     model_json = retrieve_modeljson(resourceURL)
     json_dict = {'id': model_name+'-'+run_name,
-                 'loc': bucketname+'ModelOutputs/',
+                 'cataogLoc': bucketname+'ModelOutputs/',
                  'title': model_name+' model, '+run_name+' run.',
                  'startDate': start_dt.isoformat()[:19]+'Z',
                  'stopDate': stop_dt.isoformat()[:19]+'Z',
